@@ -1,0 +1,15 @@
+modules\basic\service\AdminService.class
+modules\message\Register.class
+modules\basic\dao\BaseDao.class
+modules\basic\service\BaseService.class
+modules\basic\common\Global.class
+modules\message\SSLClient$1.class
+modules\basic\controller\AdminController.class
+modules\spider\Jingdong.class
+modules\message\HttpClientUtil.class
+modules\basic\entity\Admin.class
+modules\basic\service\impl\AdminSerivceImpl.class
+modules\spider\MiaoshaoInfo.class
+modules\basic\common\PropertiesLoader.class
+modules\message\SSLClient.class
+modules\basic\dao\AdminDao.class

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="modules.basic.dao.AdminDao">
+    <!--登录验证 -->
+    <select id="validate" resultType="modules.basic.entity.Admin" parameterType="java.lang.String">
+        select * from basic.admin where account = #{account}
+    </select>
+
+    <!--新增 -->
+    <insert id="add"  parameterType="modules.basic.entity.Admin">
+        INSERT INTO basic.ADMIN (id,account,password,name,role,temp1,temp2,temp3)
+        VALUES (#{id},#{account},#{password},#{name},#{role},
+                #{temp1},#{temp2},#{temp3})
+
+
+    </insert>
+
+    <!--更新 -->
+    <update id="update"  parameterType="modules.basic.entity.Admin">
+        UPDATE  basic.ADMIN  SET
+          account = #{account},
+          password = #{password},
+          name = #{name},
+          role = #{role},
+          temp1 = #{temp1},
+          temp2 = #{temp2},
+          temp3 = #{temp3}
+        WHERE id  =  #{id}
+    </update>
+
+    <!--删除-->
+    <delete id="delete" parameterType="java.lang.String" >
+        DELETE FROM basic.admin WHERE  id = #{id}
+    </delete>
+
+    <!--查询一个 -->
+    <select id="getOne" resultType="modules.basic.entity.Admin" parameterType="java.lang.String">
+        select * from basic.admin where id = #{id}
+    </select>
+
+    <!--查询全部 -->
+    <select id="getAll" resultType="modules.basic.entity.Admin" >
+        select * from basic.admin
+    </select>
+
+</mapper>
